@@ -1,0 +1,60 @@
+WHEN IN DOUBT
+*****
+git status
+
+
+
+GIT FILE STATES
+*****
+untracked 
+unstaged ("git add" on untracked file, "git add ." adds all files in current directory)
+staged 
+committed
+
+
+
+STARTING UP
+*****
+git init
+git add <filename>
+	or 
+git add . (does not track file deletion, use git add -A instead)
+git status
+git commit -m "message" (this is local, will not move to remote repository)
+git log
+
+
+
+WORKING WITH REMOTE REPOSITORY
+*****
+git remote add origin <remote repository location> (origin could be anything)
+git push origin master (master is the default branch name)
+git remote -v (what repositories do you have access to, what are we allowed to do)
+git clone <location> (downloads existing remote repository so you can work with it locally)
+git push ("commit" to the remote repository)
+git pull origin master (updates to latest revision on remote repository)
+
+
+
+FORK
+*****
+Check out a repository, make it your own (like checking out code)
+
+
+
+
+PANIC
+*****
+git reset --hard HEAD^ (use when working locally and you need to undo commit i.e. erase changes to revision prior, use more of ^ to go further back)
+git reset --soft HEAD^ (same as above but does not erase the changes, changes are still staged)
+
+
+NOTES
+*****
+> Git doesn't track empty directories
+> Git != GitHub. 
+	> Git is the tool we use to track changes within a repository, push code.
+	> GitHub is a website. It's a place/service we can push our code to.
+> Forking is a GitHub thing.
+> We push from a local repository to a remote repository and pull the other way.
+> 

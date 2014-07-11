@@ -1,0 +1,61 @@
+Ruby is an INTERPRETED language, not a COMPILED language.
+	Instructions are executed directly without compilation into machine-language instructions.
+
+Ruby is OBJECT-ORIENTED.
+	Everything in Ruby is an object.
+
+ruby <filename>: runs the program
+irb -> interpreted Ruby: run one line of code at a time
+
+String interpolation:
+	str = "this is a string"
+	puts "#{str} and I did some interpolation stuff" (returns nil)
+
+Symbols are like little featureless strings. Like string resources. We only use their value.
+	:symbolname
+	:symbolname.object_id
+
+5.to_s (returns "5")
+"5".to_i (returns 5)
+"abc".to_i (returns 0)
+"5".to_f (return 5.0, a float)
+"abc".to_sym (returns :abc, a symbol)
+
+a, b, c = 1, 2, 3 (multiple assignment, returns an array)
+
+str = str || "default value" (first time will give the second value, otherwise gives first value)
+	shorthand: str ||= "default value"
+
+if <condition>
+	...
+elsif
+	...
+else
+	...
+end
+
+unless <condition>
+	(executes only when condition evaluates to false. also don't do unless ... else)
+end
+
+while <condition>
+	...
+end
+
+until <condition>
+	(like unless but loopy)
+end
+
+Iterator helps to go through collections of data.
+	3.times { puts "lol"}
+		
+		OR
+
+	3.times do
+		puts "lol"
+	end
+
+one_to_ten = 1..10
+one_to_ten.do |num|
+	print (num**2).to_s
+end
